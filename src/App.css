@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+#root {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 0.5rem;
+  max-width: 80rem;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.2s ease-in-out;
+  gap: 1rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  width: 42.5vw;
+  text-align: right;
+}
+.card .consent {
+  display: flex;
+  gap: 1rem;
+}
+
+.card .consent button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.card .consent button:hover {
+  background-color: #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
