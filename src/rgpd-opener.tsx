@@ -1,28 +1,11 @@
-import { useState } from "react";
-import "./App.css";
+import React, { useState } from "react";
+import "./rgpd-opener.css";
+import { LocalStorage } from "./hooks/LocalStorage";
+function RGPD_OPENER({ width }: { width?: string }) {
+  const { alreadyOpen, consent } = LocalStorage();
 
-function App({ width }: { width?: string }) {
-  const [accepted, setAccepted] = useState(
-    localStorage.getItem("accepted") === "true" ? true : false
-  );
-  const [alreadyOpen, setAlreadyOpen] = useState(
-    localStorage.getItem("alreadyOpen") === "true" ? true : false
-  );
-
-  const consent = (x: string) => {
-    setAlreadyOpen(true);
-    localStorage.setItem("alreadyOpen", "true");
-    if (x === "accept") {
-      localStorage.setItem("accepted", "true");
-      setAccepted(true);
-    }
-    if (x === "decline") {
-      localStorage.setItem("accepted", "false");
-      setAccepted(false);
-    }
-  };
   return (
-    <div className="App">
+    <>
       {alreadyOpen === false && (
         <div
           style={width ? { width: width + "rem" } : { width: "ll" }}
@@ -54,8 +37,8 @@ function App({ width }: { width?: string }) {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
-export default App;
+export default RGPD_OPENER;

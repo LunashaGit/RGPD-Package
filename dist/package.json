@@ -1,0 +1,12 @@
+{
+  "name": "rpgd-opener-lunasha",
+  "version": "1.0.1",
+  "description": "",
+  "types": "./main.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
