@@ -8,10 +8,11 @@ export const LocalStorage = () => {
     localStorage.getItem("alreadyOpen") === "true" ? true : false
   );
 
-  const accept = (x: string) => {
-    localStorage.setItem("accepted", x);
-    setAccepted(x === "true" ? true : false);
+  const accept = (x: string | boolean) => {
+    localStorage.setItem("accepted", x as string);
+    setAccepted(x as boolean);
   };
+
   const consent = (x: string) => {
     setAlreadyOpen(true);
     localStorage.setItem("alreadyOpen", "true");
